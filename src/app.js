@@ -18,6 +18,35 @@ app.get('/', (req, res)=>{
     res.render('index')
 })
 
+app.get("/getDrink", async (req, res) => {
+  console.log(req.query);
+  try {
+    var spawn = require("child_process").spawn;
+    var pyProg = spawn(
+      "python3",
+      ["./scripts/hmm.py", req.query.ingredient, Number(req.query.amount)],
+      {
+        cwd: __dirname,
+      }
+    );
+    let result;
+    pyProg.stdout.on("data", function (data) {
+      result = data.toString();
+    });
+    pyProg.stderr.on("data", (data) => {
+      console.log(data.toString());
+    });
+    pyProg.stderr.on("close", () => {
+      console.log("DONE: ", result);
+      res.status(200).send({ result });
+    });
+  } catch (e) {
+    console.log(e);
+    return res.status(500).send(e.body);
+  }
+});
+
+
 app.listen(port, ()=>{
     console.log('Server is up on 3000')
 })
