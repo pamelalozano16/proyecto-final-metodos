@@ -167,8 +167,9 @@ n = sys.argv[2]
 n = int(n)
 # printing the stating state using state
 # dictionary
-print(state[CurrentState], "--->", end=" ")
- 
+#print(state[CurrentState], "--->", end=" ")
+result = ''
+result += state[CurrentState]
 while n-1:
     # Deciding the next state using a random.choice()
     # function,that takes list of states and the probability
@@ -176,10 +177,14 @@ while n-1:
     ingredient = np.random.choice(state, p=MyMatrix[CurrentState])
     CurrentState = state.index(ingredient)
     # printing the path of random walk
-    print(state[CurrentState], "--->", end=" ")
+    #print(state[CurrentState], "--->", end=" ")
+    #arr_states[iterarion_n] = state[CurrentState]
+    result += ',' + state[CurrentState]
     n -= 1
-print("stopped!")
- 
+
+print(result)
+#print("stopped!")
+
 # Let us find the stationary distribution of our
 # Markov chain by Finding Left Eigen Vectors
 # We only need the left eigen vectors
