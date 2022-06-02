@@ -104,7 +104,7 @@ async function getDrink() {
     }
     tableString += "</tr>";
   }
-
+  $("#table-result").find("tbody").html("");
   $("#table-result").find("tbody").append(tableString);
 
   //document.getElementById("result").innerHTML = respString;
