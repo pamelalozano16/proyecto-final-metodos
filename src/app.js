@@ -1,11 +1,14 @@
 const express = require('express')
 const path = require('path')
 const hbs = require ('hbs')
-const port=3000
-const publicPath=path.join(__dirname, '../public')
-const templatePath=path.join(__dirname, '../templates')
-const partialsPath=path.join(__dirname, '../templates/partials')
+const dotenv = require("dotenv");
+const publicPath = path.join(__dirname, "../public");
+const templatePath = path.join(__dirname, "../templates");
+const partialsPath = path.join(__dirname, "../templates/partials");
 
+dotenv.config();
+
+const port = process.env.PORT;
 const app = express()
 app.use(express.json())
 app.set('view engine', 'hbs')
