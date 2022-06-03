@@ -6,6 +6,7 @@ import sys
 import os
 
 __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
+pathTotmp = os.path.abspath(os.path.join(__location__ ,"../../../tmp"))
 RECENTAS_PATH = os.path.join(__location__, './recetas.csv')
 df = pd.read_csv(RECENTAS_PATH)
 
@@ -123,7 +124,7 @@ for i1 in ingr_set.keys():
 
 #np.savetxt('test.csv',matrix, delimiter=',')
 
-pd.DataFrame(matrix, index=ingr_set.keys(), columns = ingr_set.keys()).to_csv("file.csv")
+pd.DataFrame(matrix, index=ingr_set.keys(), columns = ingr_set.keys()).to_csv(pathTotmp+"/file.csv")
 
 ingr_set.keys()
 
