@@ -1,0 +1,103 @@
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<!-- CSS only -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    {{>header}}
+    <div class="main">
+     <h1>Tipsy Pruebas</h1>
+     <div class="form">
+     <form>
+          <div class="row" style="text-align: center; justify-content: center;">
+            <div class="col-md-6">
+              <label for="cantidad" class="form-label"># de Ingredientes</label>
+              <div class="input-group has-validation">
+                <input type="text" class="form-control" name="cantidad" id="cantidad" placeholder="# Ingredientes">
+              </div>
+            </div>
+          </div>
+            <div class="row" style="margin-top:1.5rem; text-align: center; justify-content: center;">
+                <div class="form-group col-md-6">
+                <label for="ingrediente">Primer Ingrediente</label>
+                <select id="ingrediente" name="ingrediente" class="sform-control">
+                    <option selected>Ingrediente...</option>
+                    <option value="gin">Gin</option>
+                    <option value="vermouth rosso">Vermouth rosso</option>
+                    <option value="campari">Campari</option>
+                    <option value="tonic">Tonic</option>
+                    <option value="bourbon">Bourbon</option>
+                    <option value="sugar cube">Sugar cube</option>
+                    <option value="bitters">Bitters</option>
+                    <option value="water">Water</option>
+                    <option value="rye whiskey">Rye whiskey</option>
+                    <option value="espresso">Espresso</option>
+                    <option value="coffee liqueur">Coffee liqueur</option>
+                    <option value="vermouth">Vermouth</option>
+                    <option value="orange bitters">Orange bitters</option>
+                    <option value="lemon juice">Lemon juice</option>
+                    <option value="whiskey">Whiskey</option>
+                    <option value="egg white">Egg white</option>
+                    <option value="orange peel">Orange peel</option>
+                    <option value="tequila">Tequila</option>
+                    <option value="orange liqueur">Orange liqueur</option>
+                    <option value="sweet vermouth">Sweet vermouth</option>
+                    <option value="angostura bitters">Angostura bitters</option>
+                    <option value="lemon peel">Lemon peel</option>
+                    <option value="lime juice">Lime juice</option>
+                    <option value="syrup">Syrup</option>
+                    <option value="mint leaves">Mint leaves</option>
+                    <option value="white rum">White rum</option>
+                    <option value="peach schnapps">Peach schnapps</option>
+                    <option value="orange juice">Orange juice</option>
+                    <option value="pineapple juice">Pineapple juice</option>
+                    <option value="vodka">Vodka</option>
+                    <option value="cranberry juice">Cranberry juice</option>
+                    <option value="raspberry liqueur">Raspberry liqueur</option>
+                    <option value="prosecco">Prosecco</option>
+                    <option value="aperol">Aperol</option>
+                    <option value="soda water">Soda water</option>
+                    <option value="triple sec">Triple sec</option>
+                    <option value="bourbon whiskey">Bourbon whiskey</option>
+                    <option value="angostura bitter">Angostura bitter</option>
+                    <option value="claret wine">Claret wine</option>
+                    <option value="rum">Rum</option>
+                    <option value="coconut juice">Coconut juice</option>
+                    <option value="scotch">Scotch</option>
+                    <option value="honey-ginger syrup">Honey-ginger syrup</option>
+                    <option value="blended scotch">Blended scotch</option>
+                    <option value="ice">Ice</option>
+                    <option value="tomato juice">Tomato juice</option>
+                    <option value="tabasco">Tabasco</option>
+                    <option value="salt">Salt</option>
+                    <option value="black pepper">Black pepper</option>
+                    <option value="ginger beer">Ginger beer</option>
+                    <option value="raspberry syrup">Raspberry syrup</option>
+                    <option value="dark rum">Dark rum</option>
+                    <option value="orgeat">Orgeat</option>
+                    <option value="grapefruit juice">Grapefruit juice</option>
+                    <option value="pisco">Pisco</option>
+                    <option value="cognac">Cognac</option>
+                    <option value="liqueur">Liqueur</option>
+                    <option value="blackberries">Blackberries</option>
+                </select>
+            </div>
+            </div>
+
+            <div class="row" style="margin-top:1.5rem; text-align: center; justify-content: center;">
+                <p id="result"></p>
+            </div>
+            </div>
+          <hr class="my-4">
+
+          <button type="button" onClick="getPruebas()" class="btn btn-primary">Submit</button>
+        </form>
+        </div>
+    </div>
+<script src="/index.js"></script> 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
